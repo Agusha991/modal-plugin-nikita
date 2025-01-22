@@ -6,7 +6,7 @@ module.exports = {
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'ModalPluginKzt', // Change this to match your plugin's name
+        library: 'modal-plugin-kzt', // Change this to match your plugin's name
         libraryTarget: 'umd', // Universal Module Definition
         umdNamedDefine: true, // Name the UMD module
     },
