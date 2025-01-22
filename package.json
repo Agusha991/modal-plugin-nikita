@@ -1,6 +1,6 @@
 {
-  "name": "modal-plugin-nikita",
-  "version": "1.0.20",
+  "name": "modal-plugin-kzt",
+  "version": "1.0.0",
   "description": "test plugin modals",
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
