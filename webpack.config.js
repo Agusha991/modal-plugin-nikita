@@ -1,20 +1,16 @@
-const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');  // Импорт плагина VueLoaderPlugin
-
 module.exports = {
     entry: './src/index.ts',
-    mode: "none",
     output: {
-        filename: 'index.ts',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'ModalPluginNikita',
-        libraryTarget: 'umd',
-        umdNamedDefine: true,
+        library: 'ModalPluginNikita', // Change this to match your plugin's name
+        libraryTarget: 'umd', // Universal Module Definition
+        umdNamedDefine: true, // Name the UMD module
     },
     resolve: {
         extensions: ['.js', '.ts', '.vue', '.json'],
         alias: {
-            '@': path.resolve(__dirname, 'src'), // Adjust this based on your folder structure
+            '@': path.resolve(__dirname, 'src'),
             vue: 'vue/dist/vue.runtime.esm-bundler.js',
         },
     },
@@ -24,8 +20,8 @@ module.exports = {
                 test: /\.ts$/,
                 loader: 'ts-loader',
                 options: {
-                    appendTsSuffixTo: [/\.vue$/], // This ensures TS is used in .vue files
-                }
+                    appendTsSuffixTo: [/\.vue$/],
+                },
             },
             {
                 test: /\.vue$/,
@@ -37,10 +33,8 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new VueLoaderPlugin(),  // Добавьте VueLoaderPlugin
-    ],
+    plugins: [new VueLoaderPlugin()],
     externals: {
-        vue: 'vue',
+        vue: 'vue', // Vue will not be bundled; it’s an external dependency
     },
 };
