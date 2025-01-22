@@ -1,8 +1,8 @@
 {
   "name": "modal-plugin-nikita",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "test plugin modals",
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack --config webpack.config.js",
