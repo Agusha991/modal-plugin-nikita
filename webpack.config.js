@@ -3,10 +3,11 @@ const { VueLoaderPlugin } = require('vue-loader');  // Импорт плагин
 
 module.exports = {
     entry: './src/index.ts',
+    mode: "none",
     output: {
         filename: 'index.ts',
         path: path.resolve(__dirname, 'dist'),
-        library: 'MyVuePlugin',
+        library: 'ModalPluginNikita',
         libraryTarget: 'umd',
         umdNamedDefine: true,
     },
