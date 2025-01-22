@@ -3,10 +3,11 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     entry: './src/index.ts',
+    mode: "none",
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'modal-plugin-kzt', // Change this to match your plugin's name
+        library: 'modalPluginKzt', // Change this to match your plugin's name
         libraryTarget: 'umd', // Universal Module Definition
         umdNamedDefine: true, // Name the UMD module
     },
